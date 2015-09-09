@@ -1,0 +1,23 @@
+<h1>Reports#show</h1>
+<p>Find me in app/views/reports/show.html.erb</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Destination</th>
+      <th>Shipment</th>
+      <th>Crates</th>
+      <th>Money</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shipments.each do |shipment| %>
+      <tr>
+        <td><%= shipment.planet %></td>
+        <td><%= shipment.contents %></td>
+        <td><%= shipment.crates %></td>
+        <td><%= shipment.money %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

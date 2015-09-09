@@ -1,0 +1,5 @@
+$primary: #9B59B6;
+body {
+  background: $primary;
+  color: lighten($primary, 80%);
+}
