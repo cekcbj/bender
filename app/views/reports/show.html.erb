@@ -1,5 +1,4 @@
-<h1>Reports#show</h1>
-<p>Find me in app/views/reports/show.html.erb</p>
+<h1>Reports#show <%= pluralize 2, 'man' %> </h1>
 
 <table class="table">
   <thead>
@@ -15,8 +14,8 @@
       <tr>
         <td><%= shipment.planet %></td>
         <td><%= shipment.contents %></td>
-        <td><%= shipment.crates %></td>
-        <td><%= shipment.money %></td>
+        <td><%= pluralize(shipment.crates, 'crate') %></td>
+        <td><%= number_to_currency shipment.money, precision: 0 %></td>
       </tr>
     <% end %>
   </tbody>
